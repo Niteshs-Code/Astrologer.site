@@ -3215,3 +3215,129 @@ p {
     min-height: 105px !important;
   }
 }
+
+
+/* =========================================
+   ABOUT IMAGES - 3 COLUMN LAYOUT
+   ========================================= */
+
+.about-images-row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  align-items: stretch !important;
+}
+
+.about-images-row .about-img-box {
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Keep all three images equal */
+.about-images-row .about-img {
+  display: block !important;
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+}
+
+/* =========================================
+   THIRD TAROT IMAGE
+   ========================================= */
+
+.tarot-img-box {
+  position: relative !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+/* Image */
+.tarot-img-box .about-img {
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+}
+
+/* Bottom title strip */
+.tarot-label {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  padding: 18px 20px !important;
+
+  background: rgba(20, 20, 20, 0.88) !important;
+
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-images-row {
+    gap: 18px !important;
+  }
+
+  .about-images-row .about-img,
+  .tarot-img-box .about-img {
+    height: 320px !important;
+  }
+
+  .tarot-label {
+    font-size: 14px !important;
+    padding: 15px !important;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .about-images-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .about-images-row .about-img,
+  .tarot-img-box .about-img {
+    height: 360px !important;
+  }
+
+  .tarot-label {
+    font-size: 15px !important;
+    padding: 16px !important;
+  }
+}
+
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  .about-images-row {
+    gap: 16px !important;
+  }
+
+  .about-images-row .about-img,
+  .tarot-img-box .about-img {
+    height: 300px !important;
+  }
+}
