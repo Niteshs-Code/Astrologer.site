@@ -2973,3 +2973,245 @@ p {
   color: var(--gold-light);
   transform: translateX(4px);
 }
+
+/* Hero Trust Bar Base Styles */
+.hero-trust {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2.5rem !important; /* Elements ke beech ka space */
+  padding: 1.5rem 0 !important;
+  flex-wrap: wrap !important; /* Mobile view ke liye responsive wrap */
+}
+
+/* Har Individual Block */
+.hero-trust > div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+}
+
+/* Bada Numbers/Stats Style */
+.hero-trust strong {
+  font-size: 3.2rem !important; /* Bada font size */
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: #e5c158 !important; /* Image ka gold accent color */
+}
+
+/* Text Labels */
+.hero-trust span {
+  font-size: 1.1rem !important; /* Text size */
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  line-height: 1.2 !important;
+  color: #141313 !important; /* Light contrast text color */
+}
+
+/* Vertical Separator Line */
+.hero-trust > i {
+  display: block !important;
+  width: 1px !important;
+  height: 45px !important; /* Vertical line ki height */
+  background-color: rgba(198, 191, 191, 0.2) !important;
+}
+
+/* Mobile & Tablet Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-trust {
+    gap: 1.5rem !important;
+  }
+
+  .hero-trust strong {
+    font-size: 2.4rem !important; /* Mobile par font size */
+  }
+
+  .hero-trust span {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-trust > i {
+    height: 35px !important;
+  }
+}
+
+/* Small Screen Layout (Stacking for very small displays) */
+@media (max-width: 480px) {
+  .hero-trust {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+
+  .hero-trust > i {
+    display: none !important; /* Mobile pe vertical line hide ho jayegi */
+  }
+}
+
+
+/* Container Spacing */
+.about-custom-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2.5rem !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+/* Heading Center/Left Alignment */
+.about-header {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* 2 Images Side-by-Side (Desktop) */
+.about-images-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* Left & Right Image */
+  gap: 2rem !important;
+  align-items: center !important;
+}
+
+.about-img-box {
+  position: relative !important;
+  width: 100% !important;
+}
+
+.about-img-box img {
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Badge styling for Right Image */
+.about-img-box .experience-badge {
+  position: absolute !important;
+  bottom: -15px !important;
+  left: -15px !important;
+  background-color: #e5c158 !important;
+  color: #111 !important;
+  padding: 12px 18px !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.about-img-box .experience-badge strong {
+  display: block !important;
+  font-size: 1.3rem !important;
+  line-height: 1 !important;
+}
+
+.about-img-box .experience-badge span {
+  font-size: 0.65rem !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
+/* Text Details Section Below Images */
+.about-details {
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+.about-details p {
+  margin-bottom: 1.2rem !important;
+}
+
+/* Mobile & Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-images-row {
+    grid-template-columns: 1fr !important; /* Mobile pe ek ke neeche ek images */
+    gap: 1.5rem !important;
+  }
+
+  .about-img-box img {
+    height: 280px !important;
+  }
+
+  .about-header {
+    text-align: left !important;
+  }
+}
+
+/* About Text Color Fix */
+.about-details,
+.about-details p,
+.about-copy,
+.about-copy p {
+  color: #222222 !important; /* Dark solid text color */
+  opacity: 1 !important; /* Opacity full karne ke liye */
+}
+
+/* Bold Text Dark Fix */
+.about-details strong,
+.about-copy strong {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+/* ===== PRICE OPTIONS FIX ===== */
+
+.price-options {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.price-option {
+  min-width: 0 !important;
+  width: 100% !important;
+  min-height: 122px !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.price-option span {
+  display: block !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+}
+
+.price-option strong {
+  display: block !important;
+  margin: 8px 0 2px !important;
+  font-size: clamp(25px, 2.2vw, 36px) !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+}
+
+.price-option small {
+  display: block !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .price-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .price-options {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .price-option {
+    min-height: 105px !important;
+  }
+}
