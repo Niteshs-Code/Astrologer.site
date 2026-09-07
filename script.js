@@ -615,22 +615,22 @@ Service: ${service}`;
    UPI PAYMENT BUTTON
 ========================================================= */
 
-const upiPaymentUrl =
-  "upi://pay?pa=7999840072%40ibl&pn=Sarthak%20Anand&cu=INR";
+const copyUpi = document.getElementById("copyUpi");
+const upiId = document.getElementById("upiId");
 
-function openUPI(event) {
-  event.preventDefault();
+if (copyUpi && upiId) {
+  copyUpi.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(upiId.textContent.trim());
 
-  window.location.href = upiPaymentUrl;
-}
+      copyUpi.textContent = "Copied!";
 
-const upiButton = document.getElementById("upiButton");
-const qrPayment = document.getElementById("qrPayment");
+      setTimeout(() => {
+        copyUpi.textContent = "Copy";
+      }, 2000);
 
-if (upiButton) {
-  upiButton.addEventListener("click", openUPI);
-}
-
-if (qrPayment) {
-  qrPayment.addEventListener("click", openUPI);
+    } catch (error) {
+      alert("Please copy the UPI ID manually.");
+    }
+  });
 }
