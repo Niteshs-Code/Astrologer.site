@@ -3341,3 +3341,171 @@ p {
     height: 300px !important;
   }
 }
+
+/* --- Voluntary Donation Section (Text Only & Highlighted) --- */
+.donation-card-single {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.donation-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donation-centered h2 {
+  margin-bottom: 20px;
+}
+
+.donation-main-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+/* Highlighted Box Styling */
+.donation-highlight-box {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.04));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-left: 5px solid var(--gold-color, #d4af37);
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.donation-highlight-box p {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .donation-highlight-box {
+    text-align: center;
+    border-left: 1px solid rgba(212, 175, 55, 0.3);
+    border-top: 5px solid var(--gold-color, #d4af37);
+  }
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Tooltip text on hover (optional) */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background-color: #fff;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 65px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .whatsapp-tooltip {
+    display: none; /* Hide tooltip on small mobile screens to prevent overflow */
+  }
+}
+
+
+/* --- Intro Strip Section Update --- */
+.intro-strip .intro-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+  align-items: center !important;
+}
+
+.intro-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+}
+
+.intro-sub-heading {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin: 0 !important;
+}
+
+.intro-image-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.intro-custom-img {
+  width: 100% !important;
+  max-width: 450px !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 768px) {
+  .intro-strip .intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+}
