@@ -49,6 +49,8 @@
        HEADER SCROLL EFFECT
     ===================================================== */
 
+    
+
     function handleHeaderScroll() {
 
       if (!header) return;

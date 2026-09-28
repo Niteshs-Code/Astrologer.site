@@ -865,7 +865,7 @@
   </div>
 
    <h3>
-    Tarot Card Reading
+    Tarot Card Reading 
   </h3>
 
   <p  style="font-size:17px; font-weight:600; color:rgb(245, 231, 156); " >
@@ -978,7 +978,48 @@
           </p>
         </div>
 
+ <div class="donation-info-box">
+           
+            <!-- UPI & QR Code Box -->
+            <div class="upi-payment-box">
+                <h3>Scan & Pay via UPI</h3>
+                <div class="qr-wrapper">
+                    <img src="assets/QRcode.jpeg" alt="UPI QR Code" class="qr-img">
+                </div>
+                
+                <div class="upi-id-container">
+                    <span id="upi-text">9827167330@sbi</span>
+                    <button type="button" id="copy-btn" onclick="copyUpiId()">Copy UPI ID</button>
+                </div>
+                <span id="copy-success" style="font-size: 12px; color: #d4af37; display: none; margin-top: 4px;">Copied to clipboard!</span>
+
+<div class="payment-instructions" style="margin-top: 16px; padding: 12px 14px; background-color: rgba(212, 175, 55, 0.05); border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 8px; text-align: left;">
+    <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #d4af37; font-weight: 600;">Bank Transfer Details:</h4>
+    <p style="margin: 4px 0; font-size: 13px; color: #e0e0e0; line-height: 1.5;">
+        <strong style="color: #ffffff;">Bank Name:</strong> State Bank of India (SBI)<br>
+        <strong style="color: #ffffff;">Account No:</strong> 10427323604<br>
+        <strong style="color: #ffffff;">IFSC Code:</strong> SBIN0006047
+    </p>
+</div>
+                
+
+                <!-- Clear Step-by-Step Instructions -->
+                <div class="payment-instructions">
+                    <h4>How to make a payment:</h4>
+                    <ol>
+                        <li>Click the <strong>"Copy UPI ID"</strong> button above.</li>
+                        <li>Open any UPI app (Google Pay, PhonePe, Paytm, Airtel Payments Bank, etc.).</li>
+                        <li>Select <strong>"Pay to UPI ID"</strong> or <strong>"To UPI ID / Bank"</strong>, paste the copied ID, and complete your donation amount.</li>
+                        <li>Once paid, copy your <strong>Transaction / Donation ID (UTR)</strong> from your payment app.</li>
+                        <li>Fill out the form on the right and click <strong>"Send Details on WhatsApp"</strong>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
         <a
+        style="margin-top: 20px;"
           class="btn btn-gold"
           target="_blank"
           rel="noopener"
@@ -1353,7 +1394,11 @@
                   Select a service
                 </option>
                  <option>
-                   Tarot Card Reading
+                   Tarot Card Reading online
+                </option>
+
+                <option>
+                   Tarot Card Reading In person
                 </option>
                 
                 <option>
@@ -1363,11 +1408,11 @@
                   Vastu Consultation
                 </option>
                 <option>
-                  Kundli Creation & Analysis
+                  Kundli Creation & Analysis In person
                 </option>
 
                 <option>
-                  Kundli Matching
+                  Kundli Matching In person
                 </option>
 
                 <option>
@@ -1730,6 +1775,19 @@
        JAVASCRIPT
   ====================================================== -->
 
+  <script>
+    function copyUpiId() {
+        const upiText = document.getElementById("upi-text").innerText;
+        const successMsg = document.getElementById("copy-success");
+
+        navigator.clipboard.writeText(upiText).then(() => {
+            successMsg.style.display = "block";
+            setTimeout(() => {
+                successMsg.style.display = "none";
+            }, 2000);
+        });
+    }
+</script>
   <script src="script.js"></script>
 
 </body>
